@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Resume Builder</h1>
+
+    <!-- FORM SECTION -->
+    <div class="form-container">
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <textarea id="skills" placeholder="Enter your skills"></textarea>
+        <textarea id="education" placeholder="Enter your education"></textarea>
+        <textarea id="experience" placeholder="Enter your experience"></textarea>
+        <textarea id="projects" placeholder="Enter your projects"></textarea>
+
+        <button onclick="generateResume()">Generate Resume</button>
+    </div>
+
+    <!-- RESUME OUTPUT -->
+    <div class="resume-container">
+        <div class="resume" id="resumeContent">
+            <h2 id="rName">Your Name</h2>
+            <p id="rEmail">your@email.com</p>
+
+            <hr>
+
+            <h3>Skills</h3>
+            <p id="rSkills"></p>
+
+            <h3>Education</h3>
+            <p id="rEducation"></p>
+
+            <h3>Experience</h3>
+            <p id="rExperience"></p>
+
+            <h3>Projects</h3>
+            <p id="rProjects"></p>
+        </div>
+    </div>
+    <button onclick="downloadPDF()">Download PDF</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
